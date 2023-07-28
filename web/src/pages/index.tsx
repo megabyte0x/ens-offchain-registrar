@@ -25,7 +25,7 @@ export default function App() {
   const { data, isLoading, signMessage, variables } = useSignMessage()
 
   const requestBody: WorkerRequest = {
-    name: `${debouncedName}.offchaindemo.eth`,
+    name: `${debouncedName}.bico.eth`,
     records: {
       addresses: {
         60: address,
@@ -60,14 +60,14 @@ export default function App() {
         onSubmit={(e) => {
           e.preventDefault()
           signMessage({
-            message: `Register ${debouncedName}.offchaindemo.eth`,
+            message: `Register ${debouncedName}.bico.eth`,
           })
         }}
       >
         <Input
           type="text"
           label="Name"
-          suffix=".offchaindemo.eth"
+          suffix=".bico.eth"
           placeholder="ens"
           required
           disabled={!!data || !address}
@@ -101,7 +101,7 @@ export default function App() {
         <Helper>
           <p>
             Visit the{' '}
-            <Link href={`https://ens.app/${debouncedName}.offchaindemo.eth`}>
+            <Link href={`https://ens.app/${debouncedName}.bico.eth`}>
               ENS Manager
             </Link>{' '}
             to see your name. It will stop working in 24 hours.

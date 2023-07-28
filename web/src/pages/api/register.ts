@@ -29,7 +29,7 @@ export default async function handler(
 
   const body = safeParse.data
 
-  const url = 'https://ens-gateway.gregskril.workers.dev/set'
+  const url = 'https://ens.yash-garg.workers.dev/set'
   const options = {
     method: 'POST',
     headers: {
